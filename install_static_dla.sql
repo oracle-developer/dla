@@ -1,4 +1,28 @@
 
+-- Dictionary Long Application
+-- ---------------------------
+-- MIT License
+
+-- Copyright (c) 2007 Adrian Billington, www.oracle-developer.net
+
+-- Permission is hereby granted, free of charge, to any person obtaining a copy
+-- of this software and associated documentation files (the "Software"), to deal
+-- in the Software without restriction, including without limitation the rights
+-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-- copies of the Software, and to permit persons to whom the Software is
+-- furnished to do so, subject to the following conditions:
+-- 
+-- The above copyright notice and this permission notice shall be included in all
+-- copies or substantial portions of the Software.
+-- 
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-- SOFTWARE.
+
 set pause on
 
 prompt
@@ -232,7 +256,7 @@ prompt Installing package...
 create package dictionary_pkg as
 
    /*
-   || ---------------------------------------------------------------------------------
+   || --------------------------------------------------------------------------------------------
    ||
    || Name:        DICTIONARY_PKG
    ||
@@ -334,7 +358,7 @@ create package dictionary_pkg as
    ||              FROM   v_dba_views;  --<-- returns 1 row only for SCOTT.SOME_VIEW
    ||
    ||              d) Clear the filters
-   ||              ------------------------------------------------------
+   ||              --------------------
    ||              e.g. Clear all current filters.
    ||
    ||              BEGIN
@@ -351,16 +375,17 @@ create package dictionary_pkg as
    ||              /
    ||
    ||              e) Show the current filters
-   ||              ------------------------------------------------------
+   ||              ---------------------------
    ||              e.g. Using API (can alternatively use SESSION_CONTEXT).
    ||
    ||              SELECT *
    ||              FROM   TABLE(dictionary_pkg.show_filters);
    ||
-   ||              ------------------------------------------------------
-   ||              (c) Adrian Billington, www.oracle-developer.net.
+   || License:     MIT License
+   ||              Copyright (c) 2007 Adrian Billington, www.oracle-developer.net
+   ||              See https://github.com/oracle-developer/dla/blob/master/LICENSE
    ||
-   || ---------------------------------------------------------------------------------
+   || --------------------------------------------------------------------------------------------
    */
 
    /*
@@ -439,6 +464,20 @@ end dictionary_pkg;
 /
 
 create package body dictionary_pkg as
+
+   /*
+   || --------------------------------------------------------------------------------
+   ||
+   || Name:        DICTIONARY_PKG
+   ||
+   || Description: See package specification for details.
+   ||
+   || License:     MIT License
+   ||              Copyright (c) 2007 Adrian Billington, www.oracle-developer.net
+   ||              See https://github.com/oracle-developer/dla/blob/master/LICENSE
+   ||
+   || --------------------------------------------------------------------------------
+   */
 
    type args_ntt is table of varchar2(30);
 

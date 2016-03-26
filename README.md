@@ -17,7 +17,7 @@
    3.3 Removal
       3.3.1 Static Version
       3.3.2 Dynamic Version
-4.0 Disclaimer
+4.0 License
 ```
   
 ### 1.0 Introduction
@@ -185,7 +185,5 @@ To remove the Dictionary Long Application, use the relevant version as follows:
 2. A warning will prompt for continue/cancel.
 
   
-### 4.0 Disclaimer
-See http://www.oracle-developer.net/disclaimer.php
-
-(c) Adrian Billington www.oracle-developer.net
+### 4.0 License
+This project uses the [MIT License](https://github.com/oracle-developer/dla/blob/master/LICENSE)

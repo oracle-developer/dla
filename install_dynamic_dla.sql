@@ -1,4 +1,27 @@
 
+-- Dictionary Long Application
+-- ---------------------------
+-- MIT License
+
+-- Copyright (c) 2007 Adrian Billington, www.oracle-developer.net
+
+-- Permission is hereby granted, free of charge, to any person obtaining a copy
+-- of this software and associated documentation files (the "Software"), to deal
+-- in the Software without restriction, including without limitation the rights
+-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-- copies of the Software, and to permit persons to whom the Software is
+-- furnished to do so, subject to the following conditions:
+-- 
+-- The above copyright notice and this permission notice shall be included in all
+-- copies or substantial portions of the Software.
+-- 
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-- SOFTWARE.
 
 set pause on
 
@@ -45,6 +68,19 @@ prompt Installing dla_ot type specification...
 
 CREATE TYPE dla_ot AS OBJECT
 ( 
+  /*
+  || ---------------------------------------------------------------------------------
+  ||
+  || Name:        dla_ot
+  ||
+  || Description: Implementation type for dynamic Dictionary Long Application
+  ||
+  || License:     MIT License
+  ||              Copyright (c) 2007 Adrian Billington, www.oracle-developer.net
+  ||              See https://github.com/oracle-developer/dla/blob/master/LICENSE
+  ||
+  || ---------------------------------------------------------------------------------
+  */
   atype ANYTYPE --<-- transient record type
 
 , STATIC FUNCTION ODCITableDescribe( 
@@ -218,8 +254,9 @@ CREATE PACKAGE dla_pkg AS
    ||                            FROM dba_views')
    ||                        );
    ||
-   ||              ------------------------------------------------------
-   ||              (c) Adrian Billington, www.oracle-developer.net.
+   || License:     MIT License
+   ||              Copyright (c) 2007 Adrian Billington, www.oracle-developer.net
+   ||              See https://github.com/oracle-developer/dla/blob/master/LICENSE
    ||
    || ---------------------------------------------------------------------------------
    */
@@ -319,7 +356,21 @@ prompt Installing dla_ot type body...
 
 CREATE TYPE BODY dla_ot AS
 
-   ----------------------------------------------------------------------------
+   /*
+   || ---------------------------------------------------------------------------------
+   ||
+   || Name:        dla_ot
+   ||
+   || Description: Implementation type for dynamic Dictionary Long Application
+   ||
+   || License:     MIT License
+   ||              Copyright (c) 2007 Adrian Billington, www.oracle-developer.net
+   ||              See https://github.com/oracle-developer/dla/blob/master/LICENSE
+   ||
+   || ---------------------------------------------------------------------------------
+   */
+
+   ------------------------------------------------------------------------------------
    STATIC FUNCTION ODCITableDescribe(
                    rtype OUT ANYTYPE,
                    stmt  IN  VARCHAR2
@@ -407,7 +458,7 @@ CREATE TYPE BODY dla_ot AS
 
    END;
 
-   ----------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------
    STATIC FUNCTION ODCITablePrepare(
                    sctx    OUT dla_ot,
                    tf_info IN  sys.ODCITabFuncInfo,
@@ -437,7 +488,7 @@ CREATE TYPE BODY dla_ot AS
 
    END;
 
-   ----------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------
    STATIC FUNCTION ODCITableStart(
                    sctx IN OUT dla_ot,
                    stmt IN     VARCHAR2
@@ -551,7 +602,7 @@ CREATE TYPE BODY dla_ot AS
 
    END;
 
-   ----------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------
    MEMBER FUNCTION ODCITableFetch(
                    SELF   IN OUT dla_ot,
                    nrows  IN     NUMBER,
@@ -712,7 +763,7 @@ CREATE TYPE BODY dla_ot AS
 
    END;
 
-   ----------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------
    MEMBER FUNCTION ODCITableClose(
                    SELF IN dla_ot
                    ) RETURN NUMBER IS
@@ -728,6 +779,20 @@ END;
 prompt Installing dla_pkg package body...
 
 CREATE PACKAGE BODY dla_pkg AS
+
+   /*
+   || ---------------------------------------------------------------------------------
+   ||
+   || Name:        dla_pkg
+   ||
+   || Description: See package specification for details.
+   ||
+   || License:     MIT License
+   ||              Copyright (c) 2007 Adrian Billington, www.oracle-developer.net
+   ||              See https://github.com/oracle-developer/dla/blob/master/LICENSE
+   ||
+   || ---------------------------------------------------------------------------------
+   */
 
    -----------------------------------------------------------------------------------
    FUNCTION filter_is_valid( p_name IN VARCHAR2 ) RETURN BOOLEAN IS
