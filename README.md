@@ -186,4 +186,8 @@ To remove the Dictionary Long Application, use the relevant version as follows:
 
   
 ### 4.0 License
-This project uses the [MIT License](https://github.com/oracle-developer/dla/blob/master/LICENSE)
+This project uses the MIT License.
+See https://github.com/oracle-developer/dla/blob/master/LICENSE
+
+Adrian Billington
+www.oracle-developer.net
